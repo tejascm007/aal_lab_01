@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+	int n,e,i,min,max;
+	printf("Enter the number of random numbers to generate: ");
+    scanf("%d", &n);
+    printf("Enter the minimum value: ");
+    scanf("%d", &min);
+    printf("Enter the maximum value: ");
+    scanf("%d", &max);
+    int a[n];
+
+	for (int i = 0; i < n; i++) 
+	{
+        a[i] = (rand() % (max - min + 1)) + min;
+		printf("%d\n",a[i]) ;
+    }
+    
+	e=rand() % (max - min + 1) + min;
+	printf("%d",e);
+	
+	
+    srand(time(NULL));
+    
+	
+	for(i=0;i<=n;i++)
+	{
+		if (a[i]==e)
+		{
+			printf("the element fount at %d position",i+1);
+
+			break;
+		}
+		
+		
+	}
+	if(i>n)
+	{
+	
+			printf("the element not found");
+		
+	}
+			return 0;
+
+}
